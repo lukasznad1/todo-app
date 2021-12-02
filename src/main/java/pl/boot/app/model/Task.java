@@ -1,6 +1,7 @@
 package pl.boot.app.model;
 
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
