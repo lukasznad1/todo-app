@@ -12,11 +12,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CommandLineAppStartupRunner implements CommandLineRunner {
 
-    private final TaskRepository taskRepository;
+    private final TaskRepository repository;
 
     @Override
     public void run(String... args) {
-        taskRepository.saveAll(createTaskList());
+        createTaskList().forEach(repository::save);
     }
 
     private List<Task> createTaskList() {
