@@ -1,7 +1,6 @@
 package pl.boot.app.model;
 
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,8 +15,8 @@ import javax.validation.constraints.NotBlank;
 @Table (name = "tasks")
 public class Task {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @NotBlank (message = "Task's description must be not null")
     private String description;
