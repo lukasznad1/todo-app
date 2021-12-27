@@ -19,6 +19,8 @@ public interface TaskRepository {
 
     Task save(Task entity);
 
+    boolean existsByDoneIsFalseAndGroup_Id(Integer groupId);
+
     Page<Task> findAll(Pageable pageable);
 
     List<Task> findByDone(@Param("state") boolean state);

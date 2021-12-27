@@ -1,8 +1,7 @@
 drop table if exists tasks;
-create table tasks (
-    id int primary key auto_increment,
+create table tasks
+(
+    id          int primary key auto_increment,
     description varchar(100) not null,
-    done bit
+    done        bit
 );
-
-insert into TASKS values ( 1,'test' , true )
